@@ -23,6 +23,7 @@
   ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/709620534e09e09149d2eac8efab9ebcd8b0ce1a2bd3718384e747fb585f1908-image.png)
   1. 少しの後、ユーザ名とPWを登録する。
   ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fcf7a2e3d5ce42bf74616605a2a904b824b3cb2a2f5d421450c8b72605129509-image.png)
+
   [!NOTE]
   ユーザ名には入力規則があり、今回の例では「.」が引っ掛かった<br>
   PWの設定の際の入力時には画面上にPWの文字列が表示されないので注意
