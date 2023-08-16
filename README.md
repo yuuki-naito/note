@@ -1,9 +1,6 @@
 <details>  
   <summary>リンク</summary>
-
-[[ boostnote.doc id="f152e97a-2752-4ef0-80e6-6e7a1940724a" ]]
-[[ boostnote.doc id="18b87f0f-f08e-4dba-88cf-02bdc93323ed" ]]
-
+    <a href="https://github.com/yuuki-naito/note/blob/main/test/README.md">git</a>
 </details>
 <details>  
   <summary> ドライブフォルダ </summary><div>
