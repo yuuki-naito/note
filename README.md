@@ -52,316 +52,316 @@
   出力したいファイルの内容がコンソールの画面上よりも大きい場合には、「| less」オプションを指定することでlessモードに入ることができる<br>
   lessモードでは、十字キーやPageUp PageDownキーを使用してファイルの中身を閲覧可能になる。<br>
   lessモードはqキーで終了できる。
-</div></details>
-<details><summary>echo</summary><div>
+    </div></details>
+    <details><summary>echo</summary><div>
 
-  
-  echoコマンドでは、文字列をコンソール画面に出力することができる。<br>
-  例えば、環境変数として持っている下記のような変数の内容を出力することもできる。
-  ```
-  $USER    --ユーザ名
-  $HOME    --ユーザのホームディレクトリ
-  $PATH    --コマンド検索パス
-  ```
+      
+      echoコマンドでは、文字列をコンソール画面に出力することができる。<br>
+      例えば、環境変数として持っている下記のような変数の内容を出力することもできる。
+      ```
+      $USER    --ユーザ名
+      $HOME    --ユーザのホームディレクトリ
+      $PATH    --コマンド検索パス
+      ```
 
-  環境変数には、「ユーザ名」「ユーザのホームディレクトリ」や何かのコマンドで指定した際に、対応するディレクトリパスを検索・取得する「パス」の指定などが記載されている。
-:::info $PATH
-  $PATHはコマンドサーチパスや、コマンド検索パスなどと呼ばれている。<br>
-  Linuxの特徴として、**上記のパスに指定してあるディレクトリはパス名を省略してよい**という決まりがある。<br>
-  Windowsと違い、カレントディレクトリにあったとしても**自分のファイルとは限らない**ため、コマンドを実行する際には必ずパス指定する必要がある。<br>
-:::
-  下記のようにコマンドを実施してみる。
-  ```
-  echo $USER
-  echo $HOME
-  echo $PATH
-  ```
+      環境変数には、「ユーザ名」「ユーザのホームディレクトリ」や何かのコマンドで指定した際に、対応するディレクトリパスを検索・取得する「パス」の指定などが記載されている。
+    :::info $PATH
+      $PATHはコマンドサーチパスや、コマンド検索パスなどと呼ばれている。<br>
+      Linuxの特徴として、**上記のパスに指定してあるディレクトリはパス名を省略してよい**という決まりがある。<br>
+      Windowsと違い、カレントディレクトリにあったとしても**自分のファイルとは限らない**ため、コマンドを実行する際には必ずパス指定する必要がある。<br>
+    :::
+      下記のようにコマンドを実施してみる。
+      ```
+      echo $USER
+      echo $HOME
+      echo $PATH
+      ```
 
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/6bf8393f5deab9fde36ff4d226e4be15240403392337d6244d64f2d3091a83a6-image.png)
-  ユーザ名、ホームディレクトリ、パス内容が出力された。<br>
-  下記のコマンドではビープ音/アラート音が出力される。
-  ```
-  echo -e "\a"
-  ```
-  ファイルに書き込むこともできる。
-  ```
-  echo 'line1
-  line2
-  line3' > test02
-  ```
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/0c3dfc9c56fe4960ac9c6810c2f1f7d852a321bc0c7b486f2c6940fe4188d74b-image.png)
-:::note 改行
-  シングルクォート(')で囲むことで、改行を含めてテキストファイルとして書き込みができる。
-:::
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/6bf8393f5deab9fde36ff4d226e4be15240403392337d6244d64f2d3091a83a6-image.png)
+      ユーザ名、ホームディレクトリ、パス内容が出力された。<br>
+      下記のコマンドではビープ音/アラート音が出力される。
+      ```
+      echo -e "\a"
+      ```
+      ファイルに書き込むこともできる。
+      ```
+      echo 'line1
+      line2
+      line3' > test02
+      ```
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/0c3dfc9c56fe4960ac9c6810c2f1f7d852a321bc0c7b486f2c6940fe4188d74b-image.png)
+    :::note 改行
+      シングルクォート(')で囲むことで、改行を含めてテキストファイルとして書き込みができる。
+    :::
 
-  </div></details>
-  <details><summary>alias</summary><div>
+      </div></details>
+      <details><summary>alias</summary><div>
 
-  aliasは別名という意味のコマンド。<br>
-  コマンドや、コマンドをまとめたものなどに別名をつけ、一度のCallで呼び出すことができるようにする。
-  ```
-  alias hello = "echo my name is"    --「echo my name is」というコマンドとキーワードにhelloという名前を付ける。
-  hello yuuki    --hello コマンドに文字列「yuuki」をつける
-  ```
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fffbdfe29f3e68747f78412b91141d43a1d2e33aa5b01c230ebb0a732c7fbc88-image.png)
-  `my name is yuuki    --出力結果`<br>
-  定義した別名は、ターミナルの終了とともに定義も消える。<br>
-  もし以後常に使いたいのであれば、ホームディレクトリ配下に「.bash_aliases」ファイルを作成し、定義を追加する。
-  </div></details>
-  <details><summary>curl</summary><div>
+      aliasは別名という意味のコマンド。<br>
+      コマンドや、コマンドをまとめたものなどに別名をつけ、一度のCallで呼び出すことができるようにする。
+      ```
+      alias hello = "echo my name is"    --「echo my name is」というコマンドとキーワードにhelloという名前を付ける。
+      hello yuuki    --hello コマンドに文字列「yuuki」をつける
+      ```
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fffbdfe29f3e68747f78412b91141d43a1d2e33aa5b01c230ebb0a732c7fbc88-image.png)
+      `my name is yuuki    --出力結果`<br>
+      定義した別名は、ターミナルの終了とともに定義も消える。<br>
+      もし以後常に使いたいのであれば、ホームディレクトリ配下に「.bash_aliases」ファイルを作成し、定義を追加する。
+      </div></details>
+      <details><summary>curl</summary><div>
 
-  URLやインターネットアドレスより、情報・ファイルを収集するツール。<br>
-  デフォルトのLinuxには存在しない場合があるため、apt-getコマンドを使用してインストールする必要がある。<br>
-  `sudo apt-get install curl        --管理者権限を使用してapt-getコマンドを使用し、curlツールをインストール`<br>
-  ※管理者権限のPWを聞かれる。
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/20c13578d002519a2ce9bf7ec327c1465d5cf09e0d8cdce2bde4e628e6c2cac1-image.png)
-  実際に使ってみる。ここではGoogleのホームページより情報を取得する。
-  ```
-  curl https:://google.com -o google.com
-  ```
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/bf246605b625d416423eab439deff01d63c9b62063fd9f4f0f40c0a7c7dd62c3-image.png)
-  取得結果を「google.com」という名前で格納しているので、確認する。
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/2081afb77236bf0b3db9a671306f62c7c4ceb1758f6ddf6e443f51ac7d2fb1e1-image.png)
-  コマンド実行中には、進行状況が出力されるため、不要な場合には,`-s`オプションをつける
-    
-  </div></details>
-  <details><summary>df</summary><div>
+      URLやインターネットアドレスより、情報・ファイルを収集するツール。<br>
+      デフォルトのLinuxには存在しない場合があるため、apt-getコマンドを使用してインストールする必要がある。<br>
+      `sudo apt-get install curl        --管理者権限を使用してapt-getコマンドを使用し、curlツールをインストール`<br>
+      ※管理者権限のPWを聞かれる。
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/20c13578d002519a2ce9bf7ec327c1465d5cf09e0d8cdce2bde4e628e6c2cac1-image.png)
+      実際に使ってみる。ここではGoogleのホームページより情報を取得する。
+      ```
+      curl https:://google.com -o google.com
+      ```
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/bf246605b625d416423eab439deff01d63c9b62063fd9f4f0f40c0a7c7dd62c3-image.png)
+      取得結果を「google.com」という名前で格納しているので、確認する。
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/2081afb77236bf0b3db9a671306f62c7c4ceb1758f6ddf6e443f51ac7d2fb1e1-image.png)
+      コマンド実行中には、進行状況が出力されるため、不要な場合には,`-s`オプションをつける
+        
+      </div></details>
+      <details><summary>df</summary><div>
 
-  コンピュータ情報を出力するコマンド。<br>
-  `-h`オプションをつけることで、人間が読める文字で出力され、`-x`オプションで指定したディレクトリを除外することも可能。
-    
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/39976196c789e03d28695a5a0da4a145248024af3803f62fce231ccc1be65cb1-image.png)
+      コンピュータ情報を出力するコマンド。<br>
+      `-h`オプションをつけることで、人間が読める文字で出力され、`-x`オプションで指定したディレクトリを除外することも可能。
+        
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/39976196c789e03d28695a5a0da4a145248024af3803f62fce231ccc1be65cb1-image.png)
 
-  </div></details>
-  <details><summary>diff</summary><div>
+      </div></details>
+      <details><summary>diff</summary><div>
 
-  2つのテキストファイルを比較、差分を出力するコマンド。
-  並べて表示するオプション`-y`、<br>
-  幅の指定オプション`-W xx(Wは大文字xxは数字)`や、<br>
-  記載内容が異なる点に焦点を当てるオプション`--suppress-common-lines`などがある。<br>
-  ファイル作成から比較までを実施する。
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/83e8eb892f7d0b5e4150e9e1de44130ef67c5d7314a2fc19b00e4a85c8f1bd0a-image.png)
-    
-  </div></details>
-  <details><summary>exit</summary><div>
+      2つのテキストファイルを比較、差分を出力するコマンド。
+      並べて表示するオプション`-y`、<br>
+      幅の指定オプション`-W xx(Wは大文字xxは数字)`や、<br>
+      記載内容が異なる点に焦点を当てるオプション`--suppress-common-lines`などがある。<br>
+      ファイル作成から比較までを実施する。
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/83e8eb892f7d0b5e4150e9e1de44130ef67c5d7314a2fc19b00e4a85c8f1bd0a-image.png)
+        
+      </div></details>
+      <details><summary>exit</summary><div>
 
-  ターミナル終了やシェルスクリプト実行終了、SSHのリモート接続の切断などで使用する。
-  </div></details>
-  
-  <details><summary>find</summary><div>
+      ターミナル終了やシェルスクリプト実行終了、SSHのリモート接続の切断などで使用する。
+      </div></details>
+      
+      <details><summary>find</summary><div>
 
-  検索コマンド。<br>
-  どのディレクトリから何のファイルを検索するかを指定することで実行可能。<br>
-  ワイルドカードを使用することであいまい検索も可能で、`*`(任意の1文字以上)や、<br>
-  `?`(任意の1文字)などを指定することで目的のファイルを探す。
-  `-name` 名前の指定
-  `-type` ファイルタイプの指定
-  `-iname` 大文字小文字の区別なしでファイル名検索
-  </div></details>
-  
-  <details><summary>finger</summary><div>
+      検索コマンド。<br>
+      どのディレクトリから何のファイルを検索するかを指定することで実行可能。<br>
+      ワイルドカードを使用することであいまい検索も可能で、`*`(任意の1文字以上)や、<br>
+      `?`(任意の1文字)などを指定することで目的のファイルを探す。
+      `-name` 名前の指定
+      `-type` ファイルタイプの指定
+      `-iname` 大文字小文字の区別なしでファイル名検索
+      </div></details>
+      
+      <details><summary>finger</summary><div>
 
-  ユーザの最終ログイン時刻、ユーザのホームディレクトリ、ユーザアカウントのフルネームなどのユーザ情報を表示する。
-:::tip
-  WindowsサブシステムのUnuntuでは正常動作しない可能性がある。<br>
-  また、追加インストールの必要がある場合もある。<br>
-  ※自環境では動作しなかった。
-:::
-  
-  </div></details>
-  
-  <details><summary>free</summary><div>
+      ユーザの最終ログイン時刻、ユーザのホームディレクトリ、ユーザアカウントのフルネームなどのユーザ情報を表示する。
+    :::tip
+      WindowsサブシステムのUnuntuでは正常動作しない可能性がある。<br>
+      また、追加インストールの必要がある場合もある。<br>
+      ※自環境では動作しなかった。
+    :::
+      
+      </div></details>
+      
+      <details><summary>free</summary><div>
 
-  freeコマンドは、メモリ使用量の情報が表示される。<br>
-  RAMの情報などが表示され、`-h`オプションにて人が読めるようにできる。
-  </div></details>
-  
-  <details><summary>grep</summary><div>
+      freeコマンドは、メモリ使用量の情報が表示される。<br>
+      RAMの情報などが表示され、`-h`オプションにて人が読めるようにできる。
+      </div></details>
+      
+      <details><summary>grep</summary><div>
 
-  grepコマンドは、一致検索を実施するコマンド。<br>
-  ファイルの中身を確認することができるので、例えば、テキストの中に「line2」と書かれた行のあるファイル。といった検索が可能。
-  ```
-    grep "line2" *.txt
-  ```
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/1d9bf71777f4fe7c34f1b24a333043cb5b8a99bcdf64c1fe71f3e19ea2ebc32b-image.png)
-  ※拡張子がないファイルもあるので、ファイル名は正確に指定する必要がある。
+      grepコマンドは、一致検索を実施するコマンド。<br>
+      ファイルの中身を確認することができるので、例えば、テキストの中に「line2」と書かれた行のあるファイル。といった検索が可能。
+      ```
+        grep "line2" *.txt
+      ```
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/1d9bf71777f4fe7c34f1b24a333043cb5b8a99bcdf64c1fe71f3e19ea2ebc32b-image.png)
+      ※拡張子がないファイルもあるので、ファイル名は正確に指定する必要がある。
 
-  </div></details>
-  
-  <details><summary>groups</summary><div>
+      </div></details>
+      
+      <details><summary>groups</summary><div>
 
-  ユーザが何グループ化を表示
-  </div></details>
-  
-  <details><summary>gzip</summary><div>
+      ユーザが何グループ化を表示
+      </div></details>
+      
+      <details><summary>gzip</summary><div>
 
-  ファイル圧縮コマンド。デフォルトでは元ファイルは削除される。<br>
-  オリジナルを確保したまま保存する場合には、`-k`オプションを設定する。
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/074c17eed5e9b78dc7ceb8fee1e367bf390fe227644f2b5659b974a67edc3b09-image.png)
+      ファイル圧縮コマンド。デフォルトでは元ファイルは削除される。<br>
+      オリジナルを確保したまま保存する場合には、`-k`オプションを設定する。
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/074c17eed5e9b78dc7ceb8fee1e367bf390fe227644f2b5659b974a67edc3b09-image.png)
 
-  </div></details>
-  
-  <details><summary>head</summary><div>
+      </div></details>
+      
+      <details><summary>head</summary><div>
 
-  catに似たコマンドで、ファイルの先頭10行のみ出力する。<br>
-  `-n xx`(xxは数字)オプションにて、表示行数を指定できる。
-  </div></details>
-  
-  <details><summary>tail</summary><div>
+      catに似たコマンドで、ファイルの先頭10行のみ出力する。<br>
+      `-n xx`(xxは数字)オプションにて、表示行数を指定できる。
+      </div></details>
+      
+      <details><summary>tail</summary><div>
 
-  headの末尾Ver
-  </div></details>
-  
-  <details><summary>history</summary><div>
+      headの末尾Ver
+      </div></details>
+      
+      <details><summary>history</summary><div>
 
-  履歴コマンド。<br>
-  発行したコマンドの履歴を表示する。<br>
-  履歴にある`!`と行番号を指定することで指定のコマンドを繰り返すことができる。`!2`など<br>
-  また、`!!`で1つ前のコマンドを繰り返せる。
-  </div></details>
-  
-  <details><summary>kill</summary><div>
+      履歴コマンド。<br>
+      発行したコマンドの履歴を表示する。<br>
+      履歴にある`!`と行番号を指定することで指定のコマンドを繰り返すことができる。`!2`など<br>
+      また、`!!`で1つ前のコマンドを繰り返せる。
+      </div></details>
+      
+      <details><summary>kill</summary><div>
 
-  実行中のタスクを停止することができる。
-  使用するにはプロセスID(PID)を指定する必要がある。
-  ```
-  ps -aux | grep pav02
-  ```
-  sleepコマンドで発生させたプロセスを停止した画像。
-    
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/72a192fc9b123887453c7dbac22477de87847492573a786de9000a2e06256d6e-image.png)
+      実行中のタスクを停止することができる。
+      使用するにはプロセスID(PID)を指定する必要がある。
+      ```
+      ps -aux | grep pav02
+      ```
+      sleepコマンドで発生させたプロセスを停止した画像。
+        
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/72a192fc9b123887453c7dbac22477de87847492573a786de9000a2e06256d6e-image.png)
 
-  </div></details>
-  
-  <details><summary>less</summary><div>
+      </div></details>
+      
+      <details><summary>less</summary><div>
 
-  catコマンドの際にも触れたコマンド、エディタを開かずに中身を見ることができ、<br>
-  ファイルの中身をキースクロールで確認可能。<br>
-  `less [ファイル名]`とすることで、lessコマンド単体でも使用可能。<br>
-  
-  パイプでつなぐことで、ほかのコマンドの結果をlessで見ることも可能。<br>
-  ```
-    ls -l | less
-  ```
-  </div></details>
-  
-  <details><summary>man</summary><div>
+      catコマンドの際にも触れたコマンド、エディタを開かずに中身を見ることができ、<br>
+      ファイルの中身をキースクロールで確認可能。<br>
+      `less [ファイル名]`とすることで、lessコマンド単体でも使用可能。<br>
+      
+      パイプでつなぐことで、ほかのコマンドの結果をlessで見ることも可能。<br>
+      ```
+        ls -l | less
+      ```
+      </div></details>
+      
+      <details><summary>man</summary><div>
 
-  manコマンドは、lessコマンド画面の形式で、manコマンドの内容を表示する。<br>
-  内容としては、指定したコマンドのユーザマニュアルが表示される
-  ```
-    man ls
-  ```
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/7c1929479d11482164dde82b2618778f0c8db7859f867af3b4310f6af8dcc71f-image.png)
+      manコマンドは、lessコマンド画面の形式で、manコマンドの内容を表示する。<br>
+      内容としては、指定したコマンドのユーザマニュアルが表示される
+      ```
+        man ls
+      ```
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/7c1929479d11482164dde82b2618778f0c8db7859f867af3b4310f6af8dcc71f-image.png)
 
-  </div></details>
-  
-  <details><summary>passwd</summary><div>
+      </div></details>
+      
+      <details><summary>passwd</summary><div>
 
-  パスワード変更コマンド。新しいPWを入力する。<br>
-  PWの変更になるので、他ユーザのPWを変更するには管理者権限が必要<br>
-  
-  </div></details>
-  
-  <details><summary>ping</summary><div>
+      パスワード変更コマンド。新しいPWを入力する。<br>
+      PWの変更になるので、他ユーザのPWを変更するには管理者権限が必要<br>
+      
+      </div></details>
+      
+      <details><summary>ping</summary><div>
 
-  pingを実施するコマンド。IPやアドレスを指定する。
-  ```
-    ping google.com
-  ```
-  
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/5498f7f10c4a1abcd04e9ad999cf0d2c0c7747af863e1ce117396601edf3da1a-image.png)
-  `-c`オプションで指定の回数だけ実施することが可能<br>
-  `Ctrl + C`で停止できる。
-  </div></details>
-  
-  <details><summary>ps</summary><div>
+      pingを実施するコマンド。IPやアドレスを指定する。
+      ```
+        ping google.com
+      ```
+      
+      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/5498f7f10c4a1abcd04e9ad999cf0d2c0c7747af863e1ce117396601edf3da1a-image.png)
+      `-c`オプションで指定の回数だけ実施することが可能<br>
+      `Ctrl + C`で停止できる。
+      </div></details>
+      
+      <details><summary>ps</summary><div>
 
-  実行中のプロセスを表示するコマンド。デフォルトでは、現在のシェルでのプロセス一覧になる。<br>
-  特定ユーザを表示するには`-u`オプションを指定する。<br>
-  出力が長くなる可能性があるので、`| less`をつけることを推奨
-  </div></details>
-  
-  <details><summary>shutdown</summary><div>
+      実行中のプロセスを表示するコマンド。デフォルトでは、現在のシェルでのプロセス一覧になる。<br>
+      特定ユーザを表示するには`-u`オプションを指定する。<br>
+      出力が長くなる可能性があるので、`| less`をつけることを推奨
+      </div></details>
+      
+      <details><summary>shutdown</summary><div>
 
-  システムのシャットダウンのコマンド。(Windowsアプリのターミナルでは仮想環境のため動作しない。)<br>
-  実行すると1分以内にシステムが終了する。<br>
-  今すぐに終了する際には、`now`パラメータを指定する。<br>
-  shutdownをスケジュールすることもできる。スケジュールを設定すると、ログイン中のユーザすべてにブロードキャストされる。<br>
-  シャットダウンを中止する場合には、`shutdown -c`を入力する。
-    
-  </div></details>
-  
-  <details><summary>SSH</summary><div>
+      システムのシャットダウンのコマンド。(Windowsアプリのターミナルでは仮想環境のため動作しない。)<br>
+      実行すると1分以内にシステムが終了する。<br>
+      今すぐに終了する際には、`now`パラメータを指定する。<br>
+      shutdownをスケジュールすることもできる。スケジュールを設定すると、ログイン中のユーザすべてにブロードキャストされる。<br>
+      シャットダウンを中止する場合には、`shutdown -c`を入力する。
+        
+      </div></details>
+      
+      <details><summary>SSH</summary><div>
 
-  sshコマンドを使用して、Linuxのリモート操作が可能。<br>
-  ssh接続には、ユーザ名、接続先IPアドレスorドメイン名の指定が必要。<br>
-  ※仮想環境では動作しない可能性がある。
-  </div></details>
-  
-  <details><summary>sudo</summary><div>
+      sshコマンドを使用して、Linuxのリモート操作が可能。<br>
+      ssh接続には、ユーザ名、接続先IPアドレスorドメイン名の指定が必要。<br>
+      ※仮想環境では動作しない可能性がある。
+      </div></details>
+      
+      <details><summary>sudo</summary><div>
 
-  root権限、管理者権限でコマンドを実行する際につけるコマンド。
-  </div></details>
-  
-  <details><summary>tar</summary><div>
+      root権限、管理者権限でコマンドを実行する際につけるコマンド。
+      </div></details>
+      
+      <details><summary>tar</summary><div>
 
-  複数ファイルをまとめて、1つのtarファイルと呼ばれるまとまりにするコマンド。<br>
-  アーカイブファイルとも呼ばれ、基本的には圧縮をかけるが、非圧縮も可能。<br>
+      複数ファイルをまとめて、1つのtarファイルと呼ばれるまとまりにするコマンド。<br>
+      アーカイブファイルとも呼ばれ、基本的には圧縮をかけるが、非圧縮も可能。<br>
 
-    | 短いオプション | 長いオプション | 意味 |
-    | - | - | - |
-    | -c | --create | 新しいアーカイブを作成する |
-    | -r | --append | アーカイブの最後にファイルを追加する |
-    | -A | --catenate, |
-    | --concatenate | アーカイブにtarアーカイブを追加する |
-    | -u | --update | アーカイブのファイルを更新する（アーカイブ内の同名ファイルより新しいものだけを追加する） |
-    | -d | --diff, |
-    | --compare | アーカイブとファイルシステムを比較する |
-    | --delete | アーカイブから削除する |
-    | -t | --list | アーカイブの内容の一覧を表示する |
-    | -x | --extract,--get | アーカイブからファイルを抽出する |
-    ```
-  </div></details>
-  
-  <details><summary>top</summary><div>
+        | 短いオプション | 長いオプション | 意味 |
+        | - | - | - |
+        | -c | --create | 新しいアーカイブを作成する |
+        | -r | --append | アーカイブの最後にファイルを追加する |
+        | -A | --catenate, |
+        | --concatenate | アーカイブにtarアーカイブを追加する |
+        | -u | --update | アーカイブのファイルを更新する（アーカイブ内の同名ファイルより新しいものだけを追加する） |
+        | -d | --diff, |
+        | --compare | アーカイブとファイルシステムを比較する |
+        | --delete | アーカイブから削除する |
+        | -t | --list | アーカイブの内容の一覧を表示する |
+        | -x | --extract,--get | アーカイブからファイルを抽出する |
+        ```
+      </div></details>
+      
+      <details><summary>top</summary><div>
 
-  Linuxのマシン関連の情報をリアルタイムに表示する。<br>
-  `E`キーを入力することで人間が見やすくできる。
-  `Q`キーで終了する。
-  </div></details>
-  
-  
-  <details><summary>uname</summary><div>
+      Linuxのマシン関連の情報をリアルタイムに表示する。<br>
+      `E`キーを入力することで人間が見やすくできる。
+      `Q`キーで終了する。
+      </div></details>
+      
+      
+      <details><summary>uname</summary><div>
 
-  作業中のコンピュータにかかわるシステム情報を取得できる。
-  ```
-    -a  すべて表示
-    -s  カーネルタイプ
-    -r  カーネルリソース
-    -v  バージョン
-  ```
-  </div></details>
-  
-  
-  <details><summary>w</summary><div>
+      作業中のコンピュータにかかわるシステム情報を取得できる。
+      ```
+        -a  すべて表示
+        -s  カーネルタイプ
+        -r  カーネルリソース
+        -v  バージョン
+      ```
+      </div></details>
+      
+      
+      <details><summary>w</summary><div>
 
-  ログインユーザ一覧
-  </div></details>
-  
-  
-  <details><summary>whoami</summary><div>
+      ログインユーザ一覧
+      </div></details>
+      
+      
+      <details><summary>whoami</summary><div>
 
-  現在のログインユーザがだれかを表示
-  </div></details>
+      現在のログインユーザがだれかを表示
+      </div></details>
 </div></details>
 
 <details>
