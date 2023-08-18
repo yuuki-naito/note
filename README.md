@@ -1,1 +1,2 @@
-![Linux](https://github.com/yuuki-naito/note/blob/main/Linux.md)
+[Linux](https://github.com/yuuki-naito/note/blob/main/Linux.md)
+[Git](https://github.com/yuuki-naito/note/blob/main/Git.md)
