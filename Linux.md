@@ -1,3 +1,5 @@
+![Linux](https://github.com/yuuki-naito/note/blob/main/Linux.md)
+
 <details>  
   <summary>リンク</summary>
     <a href="https://github.com/yuuki-naito/note/blob/main/test/README.md">git</a>
