@@ -3,10 +3,6 @@
 [Git](https://github.com/yuuki-naito/note/blob/main/Git.md)  
 
 <details>  
-  <summary>リンク</summary>
-    <a href="https://github.com/yuuki-naito/note/blob/main/test/README.md">git</a>
-</details>
-<details>  
   <summary> ドライブフォルダ </summary><div>
   
   <a href="https://drive.google.com/drive/folders/1gBcU39HoN8ojK4kbKTYJj8MxPPMXkJnQ?usp=drive_link">ドライブフォルダ</a>
@@ -22,11 +18,11 @@
   - WIndowsへのInstall
   1. WindowsへのLinux環境として、まずはUbuntuをInstallする。
   1. WindowsでLinuxを動作可能にするために、「スタート」「設定」「アプリと機能」(右上に)「プログラムと機能」より、「Windowsの機能の有効化と無効化を選択。下記画像の「Linux用Windowsサブシステム」を有効にする。
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/763f82a1cfde77cd8728bced0b94c745ec1d792e3b24bfe6c25004b1bd4848a6-image.png)
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux1_WIndows%E3%81%AE%E8%A8%AD%E5%AE%9A.png)
   1. WindowsストアよりUbuntuを検索、インストールする。
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/709620534e09e09149d2eac8efab9ebcd8b0ce1a2bd3718384e747fb585f1908-image.png)
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux2%EF%BC%BFUbuntu%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.png)
   1. 少しの後、ユーザ名とPWを登録する。
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fcf7a2e3d5ce42bf74616605a2a904b824b3cb2a2f5d421450c8b72605129509-image.png)
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux3_Ubuntu%E3%83%A6%E3%83%BC%E3%82%B6%E7%99%BB%E9%8C%B2.png)
 
   [!NOTE]
   ユーザ名には入力規則があり、今回の例では「.」が引っ掛かった<br>
@@ -50,7 +46,7 @@
   cat /etc/passwd
   ``` 
 
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/3ec3cdad0a4d003b1d8185135672f5a6effd1f28e34d6bfe8a20aa4bfc7c5395-image.png)
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux4_Cat%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
 [!note]
   対象のファイルについては、きちんと参照パスが現在位置から指定できる場所にいる必要がある。
 
@@ -83,7 +79,7 @@
       echo $PATH
       ```
 
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/6bf8393f5deab9fde36ff4d226e4be15240403392337d6244d64f2d3091a83a6-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux5_Echo%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
       ユーザ名、ホームディレクトリ、パス内容が出力された。<br>
       下記のコマンドではビープ音/アラート音が出力される。
       ```
@@ -95,7 +91,7 @@
       line2
       line3' > test02
       ```
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/0c3dfc9c56fe4960ac9c6810c2f1f7d852a321bc0c7b486f2c6940fe4188d74b-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux6_Echo%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%892.png)
     [!NOTE]
      改行
       シングルクォート(')で囲むことで、改行を含めてテキストファイルとして書き込みができる。
@@ -111,7 +107,7 @@
       hello yuuki    --hello コマンドに文字列「yuuki」をつける
       ```
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fffbdfe29f3e68747f78412b91141d43a1d2e33aa5b01c230ebb0a732c7fbc88-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux7_Alias%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
       `my name is yuuki    --出力結果`<br>
       定義した別名は、ターミナルの終了とともに定義も消える。<br>
       もし以後常に使いたいのであれば、ホームディレクトリ配下に「.bash_aliases」ファイルを作成し、定義を追加する。
@@ -123,16 +119,16 @@
       `sudo apt-get install curl        --管理者権限を使用してapt-getコマンドを使用し、curlツールをインストール`<br>
       ※管理者権限のPWを聞かれる。
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/20c13578d002519a2ce9bf7ec327c1465d5cf09e0d8cdce2bde4e628e6c2cac1-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux8_Curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
       実際に使ってみる。ここではGoogleのホームページより情報を取得する。
       ```
       curl https:://google.com -o google.com
       ```
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/bf246605b625d416423eab439deff01d63c9b62063fd9f4f0f40c0a7c7dd62c3-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux9_Curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%892.png)
       取得結果を「google.com」という名前で格納しているので、確認する。
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/2081afb77236bf0b3db9a671306f62c7c4ceb1758f6ddf6e443f51ac7d2fb1e1-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux10_Curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%893.png)
       コマンド実行中には、進行状況が出力されるため、不要な場合には,`-s`オプションをつける
         
       </div></details>
@@ -141,7 +137,7 @@
       コンピュータ情報を出力するコマンド。<br>
       `-h`オプションをつけることで、人間が読める文字で出力され、`-x`オプションで指定したディレクトリを除外することも可能。
         
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/39976196c789e03d28695a5a0da4a145248024af3803f62fce231ccc1be65cb1-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux11_Curl%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%894.png)
 
       </div></details>
       <details><summary>diff</summary><div>
@@ -152,7 +148,7 @@
       記載内容が異なる点に焦点を当てるオプション`--suppress-common-lines`などがある。<br>
       ファイル作成から比較までを実施する。
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/83e8eb892f7d0b5e4150e9e1de44130ef67c5d7314a2fc19b00e4a85c8f1bd0a-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux12%E2%80%97Diff%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
         
       </div></details>
       <details><summary>exit</summary><div>
@@ -196,7 +192,7 @@
         grep "line2" *.txt
       ```
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/1d9bf71777f4fe7c34f1b24a333043cb5b8a99bcdf64c1fe71f3e19ea2ebc32b-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux13_Grep%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
       ※拡張子がないファイルもあるので、ファイル名は正確に指定する必要がある。
 
       </div></details>
@@ -211,7 +207,7 @@
       ファイル圧縮コマンド。デフォルトでは元ファイルは削除される。<br>
       オリジナルを確保したまま保存する場合には、`-k`オプションを設定する。
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/074c17eed5e9b78dc7ceb8fee1e367bf390fe227644f2b5659b974a67edc3b09-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux14_Gzip%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
 
       </div></details>
       
@@ -243,7 +239,7 @@
       ```
       sleepコマンドで発生させたプロセスを停止した画像。
         
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/72a192fc9b123887453c7dbac22477de87847492573a786de9000a2e06256d6e-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux15_Kill%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
 
       </div></details>
       
@@ -267,7 +263,7 @@
         man ls
       ```
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/7c1929479d11482164dde82b2618778f0c8db7859f867af3b4310f6af8dcc71f-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux16_Man%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
 
       </div></details>
       
@@ -285,7 +281,7 @@
         ping google.com
       ```
       
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/5498f7f10c4a1abcd04e9ad999cf0d2c0c7747af863e1ce117396601edf3da1a-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux17_Ping%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
       `-c`オプションで指定の回数だけ実施することが可能<br>
       `Ctrl + C`で停止できる。
       </div></details>
@@ -409,7 +405,7 @@
     - ターミナルには基本的にはGUIがないので、ファイルリストについてはコマンドで取得する。<br>
     `ls`コマンドを使用する。このコマンドは別のパスも指定することが可能。
     `-l`オプションを使用することで、詳細情報を表示。<br>
-  ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/f401eff86786b094e8da2de3e0e144b40eaf0175166dcd1d8f09ef68037bb75a-image.png)
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux18_%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E2%80%97%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%AA%E3%82%B9%E3%83%88.png)
     先頭の10桁の文字列にはそれぞれ意味があり、1桁目がファイル属性、以降はそれぞれ3文字ずつ、所有者、グループ、他の人のアクセス権限(パーミッション)が表示されている。<br>
     1. ファイル種類<br>
     下記の属性がある。<br>
@@ -478,7 +474,7 @@
   
     - 各リンクの相違点を記載する。
     
-    ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/fb242444656360d00fe99d282423943f7a3c3524a1528062f0bbca1a05078702-image.png)
+    ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux19_%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF.png)
   
     [!NOTE]
       i ノード番号 – インデックス ノード番号は、Linux/Unix システム内のすべてのファイルに割り当てられる一意の番号です。<br>
@@ -499,7 +495,7 @@
       `-a`オプションを使用すると、すべてのファイルとディレクトリのディスク使用量が表示される。<br>
       どのオプションも`-h`と併用可能
   
-        ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/547c624625985e53aff9daf53167b816e86dd9fc1f565b760b0376250add7aa0-image.png)
+        ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux20_Du%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
   
 - アクセス許可<br>
   - 所有権<br>
@@ -524,7 +520,7 @@
   
     各ファイルやディレクトリの権限の確認については、`ls -l`コマンドにて確認ができる。<br>
     また、それぞれの権限のパターンごとに数字が割り振られていて、下記の表のとおりになる。
-      ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/34b592e5bb96eefc0066487578882b88f19b6dfdb08fe20c22d163489e7d10f3-image.png)
+      ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux21_%E6%A8%A9%E9%99%90.png)
 
   - `chmod`コマンド<br>
     上記で確認していたアクセス権限の変更については、`chmod`コマンドを実行する。
@@ -537,7 +533,7 @@
     ```
     付与方法はそれぞれ下記の通り。
     
-    ![image.png](https://boostnote.io/api/teams/R3VwmLMvj/files/1477c656cd158a4dd205a663b9b57797a45854b1efb25899c9cac9ba0920c9ce-image.png)
+    ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux22_%E6%A8%A9%E9%99%902.png)
     上記の数字を、それぞれ[ユーザ(u)][グループ(g)][その他(o)]の順に数値で設定の上ファイルを指定する。
     もしくは個別にu/g/oを指定し、各ユーザに対して追加`+`、設定`=`、削除`-`を記述する。
   
@@ -559,3 +555,222 @@ x-実行許可とは、ディレクトリに「入る」ことと、サブディ
   
 
 </div></details>
+
+# Pacage Manager
+- Linuxではアプリケーションソフトについて、基本パッケージという形で用意されており、各パッケージを管理するために** パッケージマネージャ ** と呼ばれるものが開発された。  
+Ununtuで実装されている基本的なパッケージマネージャは`apt-get`になる。  
+LinuxのOSではパッケージマネージャを使用してアプリが最新か、正常にインストールされているかを確認する。  
+利用可能なソフトウェアの最新リストも保持しており、リポジトリと呼ばれる外部DBに保存される。  
+
+- `apt-get`を使用したパッケージ管理
+  - 前提条件
+    1. Linuxであること
+    2. ターミナルへアクセスできること
+    3. Ubuntu　or　Debian　ベースのLinuxにインストールされているapt-getツールであること  
+  - Ubuntuパッケージリポジトリを更新する。  
+    基本的にアプリをインストールする際には、**現在のアプリケーションが最新か確認する**癖をつけたほうが良い。  
+    
+    最新Verかの確認  
+    `sudo apt-get update`  
+    システムがリポジトリ(外部DB)に最新Verがないかをチェックする。
+    
+  - パッケージのインストール  
+    今回は`software-properties-common`というソフトをインストールする。  
+    このアプリは`add-apt-repository`コマンドを追加する。
+    
+  - アプリのインストール  
+    `sudo apt-get install software-properties-common`  
+    apt-getツールがリポジトリ(外部DB)に接続し、対象のコマンドを実装したアプリを検索、  
+    取得、インストールを実施する。  
+    ※apt-getでアクセスできるリポジトリの追加をコマンドで実行できるようにするソフト
+    
+    実際にPHPのアプリを追加する。  
+    `sudo add-apt-repository ppa:ondrej/php
+    
+    php8をインストールする。
+    `sudo apt install php8.0 libapache2-mod-php8.0`  
+    
+    インストールされているアプリを更新する。  
+    `sudo apt-get upgrade`  
+    
+    アプリのアンインストールを実施するには、下記のコマンドになる。  
+    `sudo apt remove [パッケージ名]`  
+    
+  - `apt-get` と `apt`の違い  
+    4つの違いがある。
+    1. aptは、apt-getとapt-cacheの機能を統合している。
+    2. 開発者か使いやすいような画面出力の追加。
+    3. 既存機能/既存コマンドを使いやすいようにカスタムしたコマンド
+    4. aptコマンド専用機能の追加
+        1. `apt search <term>`　パッケージを検索できる。
+        2. `apt list --upgradable`更新可能なパッケージを確認。
+    
+    `apt`と`apt-get`の使い分けは、aptがコマンドラインで、apt-getがスクリプトで使うのが良いと公式では言われている。
+    
+
+- シェル
+
+  キーボードからのコマンドをOSに渡して実行するプログラム。
+  
+  昔はこれが唯一のUIだった。
+  
+  対話型の言語。
+  
+  Unixのshの発展形である、Bashという拡張子のファイルになる。その外にも、ksh,tcsh,zshなどがある。
+  
+  端末＝ターミナルエミュレータと呼ばれるもの。※いつも開いてコマンドを打っているもの。
+  
+- 変数
+
+  値を代入する文字列。
+  
+  数値、テキスト、ファイル名、デバイスなど、各種データを保存可能。
+  
+  変数はあくまでもデータへのポインタ※名称やアドレスの情報ということ。
+  
+  シェル上で作成・割り当て・削除が可能
+  
+  変数は`$`で始まり、$の後TABを2回押すことですべての変数を確認できる。
+  
+  `printenv`コマンドですべての変数の値が表示できる。
+  
+  変数の作成は`[変数名]=[値]`で可能。
+  
+  `readonly`コマンドで、読み取り専用に設定ができる。
+  
+  - 変数の型
+    1. ローカル変数
+    
+      シェルの現在のインスタンスに対して存在する変数。
+      
+      シェルによって起動されるプログラムでは使用できない。
+      
+      コマンドプロンプトで設定できる。
+      
+      ※`local`コマンドを使うことで、**関数内のみ**にスコープを設定できる。
+      
+      
+    3. 環境変数
+      
+      シェルのすべての子プロセスで使用可能な変数。※広域変数。
+      
+      ※１変数名は大文字と小文字を区別される。
+      
+      ※２1変数に複数の値を割り振るにはコロン`:`で区切る必要がある。
+      
+      ※３`=`の前後のスペースは不要
+      
+    5. シェル変数
+      
+      シェルによって設定される特殊な変数。
+      
+      シェルが正常動作をするために必要。
+      
+      一部は環境変数だが、そのほかはローカル変数となる。
+      
+    1. 特殊な変数
+    ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux23_%E3%82%B7%E3%82%A7%E3%83%AB%E7%89%B9%E6%AE%8A%E6%96%87%E5%AD%97.png)
+
+      ```
+          echo 'echo "\$0：" $0 ; echo "\$1：" $1; echo "\$#：" $# ;echo "\$*：" $* ;echo "\$@：" $@ ;echo "\$?：" $?;echo "\$$：" $$;echo "\$!：" $!;echo "\$-：" $-' >app
+        ./app
+      ```
+
+- パイプコマンド
+  pipeコマンドを使用することで、コマンドの出力結果を別のコマンドに送信できる。
+  
+  出力、入力、エラーなどの情報を別のプロセスへリダイレクトし、後続処理を実行可能。
+  
+  `cat file | grep -Po "\d+"`
+  fileの中身を出力し、出力結果から、grepによって数値のみを出力する。というコマンド
+  
+- `sudo su`コマンドによるユーザの切り替え
+  `sudo`管理者権限でのコマンド実行
+  
+  `su`sudoコマンドの引数、スーパーユーザ※管理者権限保持ユーザ
+  
+  - プロセス
+
+  Lonuxではすべてのプログラムはプロセスと呼ばれ、OSによって常にいくつか起動している。
+  
+  Linuxでは各プロセスにID or PID が設定されていて、数字でプロセスを管理できる。
+  
+  バックグラウンド、フォアグラウンドの別がある。
+  
+- プロセスの種類
+
+  プログラム実行中にはプロセスは生き続ける。
+  
+  `foreground process`と`background process`の二つがあるが、どちらも出力は同じになる。
+  
+  違いは、**ユーザが操作などの介入ができるもの**がフォアグラウンド※きーぼど入力など
+  
+  **操作できず、他プロセスと並列で実行できるもの**がバックグラウンド
+  
+  コマンドの最後に`&`をつけることでバックグラウンドのコマンドになる。
+  
+  - バックグラウンドコマンドの確認
+  
+    `job`コマンドを実行することで、バックグラウンドコマンドの状況を確認できる。
+    
+  - プロセスの状態変化
+    1. `Running`実行中、または実行準備完了のプロセス。※CPU待ちなど
+    2. `Waiting`待機中、イベントの発生やリソース待ちなど。
+
+      割り込み可能か不可能かによって分けられる。
+    1. `Stopped`シグナルの受信によって中断している状態。※デバッグなど
+    2. `Zombie`プロセスが停止しているが、プロセステーブルに残っている状態。
+
+  - アクティブプロセスの確認
+    - `ps`コマンド
+  
+      システム上でアクティブなプロセスに関する情報を表示する。
+      
+    - `top`コマンド
+    
+      リアルタイムにプロセスの状況を表示する。※動的
+
+    - `fg`コマンド
+
+    バックグラウンドプロセスをフォアグラウンドにする。※PIDを指定
+    - `bg`コマンド
+
+    フォアグラウンドプロセスをバックグラウンドにする。※PIDを指定
+    - `nice`コマンド
+
+    プログラムを、優先度を指定して起動可能。
+    - `renice`コマンド
+
+    実行中の優先度を変更可能。
+- SSH  
+  Secure Shellの略で、リモートコンピュータ/サーバにアクセスできるようにするプロトコル。  
+  ローカルコンピュータの入力を、サーバ/リモートコンピュータへ送信・操作が可能になる。  
+  
+  - 環境設定  
+    Linuxのほとんどでは、OSの一部としてsshコマンドがある。  
+    WindowsのサブシステムUbuntuではサーバ用に追加のsshをインストールする必要がある。
+  
+  `sudo apt-get update -y` すべてのプログラムの更新  
+  `sudo apt-get install openssh-server`sshサーバのインストール  
+  `sudo service ssh --full-restart`sshサーバの起動  
+  `ip addr`ipアドレスの取得  
+  
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux24_Ip_Addr%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.png)
+
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux25_Ip_Addr%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%892.png)
+
+  取得したIPアドレス：169.254.255.255
+  
+- SSHクライアント環境  
+  MACかLinuxの場合には、sshクライアントコマンドが利用可能。  
+  ターミナルを開いて`ssh`と入力するだけ。  
+  Windowsでは追加ソフトをInstallする必要がある。
+  
+  1. gitのbashターミナルからssh接続で接続する。  
+    ※`<BROADCAST,MULTICAST,UP>`と記載のあった`eth1`の接続で接続成功。
+  ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux26%E2%80%97SSH%E6%8E%A5%E7%B6%9A.png)
+
+  2. 接続後sshキーの存在を確認、作成  
+    ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux27_SSH%E3%82%AD%E3%83%BC.png)
+    ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux28%E2%80%97SSH%E3%82%AD%E3%83%BC2.png)
+    この設定で、今後PW入力なしで接続可能になる。
