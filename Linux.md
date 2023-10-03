@@ -775,3 +775,4 @@ LinuxのOSではパッケージマネージャを使用してアプリが最新�
     ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux27_SSH%E3%82%AD%E3%83%BC.png)
     ![image.png](https://github.com/yuuki-naito/note/blob/main/image/Linux28%E2%80%97SSH%E3%82%AD%E3%83%BC2.png)
     この設定で、今後PW入力なしで接続可能になる。
+    test1
